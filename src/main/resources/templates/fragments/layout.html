@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <!-- Fragment: Navbar -->
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" th:href="@{/}">Spring MVC Lab</a>
-        <div class="navbar-nav">
+<nav th:fragment="navbar" class="sticky top-0 z-50 bg-black/60 backdrop-blur-md text-white px-6 py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <div>
+            <a class="text-2xl font-bold tracking-wide hover:text-blue-400 transition duration-300" th:href="@{/}">Spring MVC Lab</a>
+        </div>
+        <div class="space-x-6">
             <a class="nav-link" th:href="@{/}">Home</a>
             <a class="nav-link" th:href="@{/products}">Produk</a>
             <a class="nav-link" th:href="@{/about}">About</a>
@@ -14,7 +16,7 @@
 </nav>
 
 <!-- Fragment: Footer -->
-<footer th:fragment="footer" class="bg-light text-center py-3 mt-5">
+<footer th:fragment="footer" class="mt-auto bg-white/10 text-white text-center py-3 mt-5">
     <div class="container">
         <p class="text-muted mb-0">
             Spring MVC Lab &copy; 2026 | WEB-202 Week 4
