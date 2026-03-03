@@ -55,7 +55,9 @@ public class ProductController {
 
     // GET /products/category/Elektronik → filter by category
     @GetMapping("/category/{category}")
+
     public String productsByCategory(@PathVariable String category, Model model) {
+
         List<Product> products = productService.findByCategory(category);
 
         model.addAttribute("products", products);
